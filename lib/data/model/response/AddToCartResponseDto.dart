@@ -1,0 +1,60 @@
+import 'package:ecommerce/domain/entities/AddToCartResponseEntity.dart';
+
+class AddToCartResponseDto extends AddToCartResponseEntity{
+  AddToCartResponseDto({
+      super.status,
+      super.message,
+      super.numOfCartItems,
+      super.data,});
+
+  AddToCartResponseDto.fromJson(dynamic json) {
+    status = json['status'];
+    message = json['message'];
+    numOfCartItems = json['numOfCartItems'];
+    data = json['data'] != null ? CartDataDto.fromJson(json['data']) : null;
+  }
+
+}
+
+class CartDataDto extends CartDataEntity{
+  CartDataDto({
+      super.id,
+      super.cartOwner,
+      super.products,
+      super.createdAt,
+      super.updatedAt,
+      super.v,
+      super.totalCartPrice,});
+
+  CartDataDto.fromJson(dynamic json) {
+    id = json['_id'];
+    cartOwner = json['cartOwner'];
+    if (json['products'] != null) {
+      products = [];
+      json['products'].forEach((v) {
+        products?.add(AddProductCartDto.fromJson(v));
+      });
+    }
+    createdAt = json['createdAt'];
+    updatedAt = json['updatedAt'];
+    v = json['__v'];
+    totalCartPrice = json['totalCartPrice'];
+  }
+
+}
+
+class AddProductCartDto extends AddProductCartEntity {
+  AddProductCartDto({
+      super.count,
+      super.id,
+      super.product,
+      super.price,});
+
+  AddProductCartDto.fromJson(dynamic json) {
+    count = json['count'];
+    id = json['_id'];
+    product = json['product'];
+    price = json['price'];
+  }
+
+}

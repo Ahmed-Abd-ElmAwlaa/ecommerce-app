@@ -1,7 +1,15 @@
 # ecommerce_app
 
+Technologies : http, Cached Network Image, API integration ,
+      Clean Architecture, MVVM ,Repository Pattern ,State Management ( Cubit ), 
+      Shared preferences, Screenutil .
 
-## Screens for this app
+      
+Features : Allows users to shop online, browse product catalogs, create wish lists, add items to a cart, and complete purchases.
+
+
+## Screens for this app :
+
 <div>
 <img src="https://github.com/user-attachments/assets/6f096e85-8884-4a42-9888-cace13be9f06" width="300">
 <img src="https://github.com/user-attachments/assets/33e2f41b-1ad4-4742-9e01-6ce45dafdac5" width="300">

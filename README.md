@@ -7,7 +7,7 @@ Technologies : http, Cached Network Image, API integration ,
       
 Features : Allows users to shop online, browse product catalogs, create wish lists, add items to a cart, and complete purchases.
 
-
+## Note : I'm not done with this app yet.
 ## Screens for this app :
 
 <div>
